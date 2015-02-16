@@ -29,7 +29,7 @@ Enjoy.
 
 ## Examples
 
-Set stack to 1GB: `stackup <path_to_binary> 0x1000000000`
+Set stack to 1GB: `stackup <path_to_binary> 0x0x40000000`
 
 Set stack to 0xdeadbeef: `stackup <path_to_binary> 0xdeadbeef`
 
