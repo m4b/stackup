@@ -3,7 +3,7 @@ xnu MAXSSIZ got you down?  `stackup <path_to_binary> 0xdeadbeef` makes everythin
 
 The Mac OS X kernel 'hardcodes' the stack size (`MAXSSIZ`) to 64MB.
 
-However, check out this kernel code in the `load_main` routine in `bsd/kern/mach-loader.c`:
+However, check out this kernel code in the `load_main` routine in `xnu/bsd/kern/mach_loader.c`:
 
 ```` c
 if (epc->stacksize) {
