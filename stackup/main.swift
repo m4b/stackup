@@ -36,6 +36,11 @@ if let path = String(UTF8String: Process.arguments[1])?.stringByExpandingTildeIn
     
     let count = fread(&mh, UInt(sizeof(mach_header_64)), 1,fd)
     
+    if mh.magic != MH_MAGIC_64 {
+        println("error; file is not a mach-o binary")
+        exit(EXIT_FAILURE)
+    }
+    
     //    let stacksize = UInt64(0x10000)
     
     var offset:UInt32 = 0x0
